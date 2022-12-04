@@ -1,0 +1,4 @@
+Q1:- You are given two tables: Students and Grades. Students contains three columns ID, Name and Marks.
+
+Ans:- select if(G.Grade >= 8, S.Name, if(G.Grade < 8, Null, S.Name) ) as Name, G.Grade, S.Marks from Students S 
+left join Grades G on(S.Marks >= G.Min_Mark and S.Marks <= G.Max_Mark) order by G.Grade Desc, S.Name Asc, S.Marks Asc;
